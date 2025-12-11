@@ -12,7 +12,6 @@ app.use(express.json());
 
 const placeholderRouter = container.get<PlaceholderRouter>(TYPE.PlaceholderRouter)
 
-
 app.use('/', placeholderRouter.exec())
 
 
