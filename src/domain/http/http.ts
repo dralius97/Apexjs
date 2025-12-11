@@ -23,9 +23,9 @@ export interface HttpRequest {
     method: string;
     path: string;
     headers: Record<string, string> | string[];
-    query?: Record<string, string>;
-    params?: Record<string, string>;
-    body?: unknown;
+    query: Record<string, any>;
+    params: Record<string, any>;
+    body: Record<string, any>;
     files?: Record<string, UploadedFile> | UploadedFile[]; 
 }
 

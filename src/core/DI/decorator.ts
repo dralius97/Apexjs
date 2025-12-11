@@ -6,9 +6,9 @@ export const Inject = (token: Identifier) => {
         _value: undefined, 
         context: ClassFieldDecoratorContext
     ) => {
-        context.addInitializer(function () {
+        return context.addInitializer(function () {
             const c = Container.get();
-            (this as Record<string, unknown>)[String(token)] = c.get(token);
+            (this as Record<string, unknown>)[context.name as string] = c.get(token);
         });
     };
 };

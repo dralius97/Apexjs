@@ -11,7 +11,7 @@ export class ExpressAdapter {
     @Inject(TYPE.Middleware) private middleware!: Middleware
     @Inject(TYPE.HttpResponseFormatter) private httpResponseFormatter!: HttpResponseFormatter
 
-    public call = (mdworFn: string| symbol | HttpHandler, maybeFn?: HttpHandler) => async ( req: Request, res: Response )  => {
+    public call = (mdworFn: string | symbol | HttpHandler, maybeFn?: HttpHandler) => async ( req: Request, res: Response )  => {
         const [httpRequest, httpResponse] = this.ctx( req, res )
         try {
             const hasMiddleware = typeof mdworFn !== 'function'
@@ -32,8 +32,8 @@ export class ExpressAdapter {
             send( data ) {
                 return res.send( data )
             },
-            setHeader( name, value ) {
-                return res.setHeader( name, value )
+            setHeader( key, value ) {
+                return res.setHeader( key, value )
             },
             status( code ) {
                 res.status( code )
