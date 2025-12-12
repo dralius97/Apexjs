@@ -1,4 +1,4 @@
-import { Either } from "../signal/railway.js";
+import { Either } from "../signal/railway";
 
 export interface UploadedFile {
   filename: string;

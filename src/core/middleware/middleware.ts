@@ -1,6 +1,6 @@
-import { HttpRequest } from "../../domain/http/http.js"
-import { Left, Ok, Right } from "../../domain/signal/railway.js"
-import { MdwFN } from "./type.js"
+import { HttpRequest } from "../../domain/http/http"
+import { Left, Ok, Right } from "../../domain/signal/railway"
+import { MdwFN } from "./type"
 
 export class Middleware {
     private middleware: Map<string|symbol, MdwFN[] >

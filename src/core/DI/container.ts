@@ -1,4 +1,4 @@
-import { ContainerCore } from "./containerCore.js";
+import { ContainerCore } from "./containerCore";
 
 class Container {
     private static container: ContainerCore | null = null;

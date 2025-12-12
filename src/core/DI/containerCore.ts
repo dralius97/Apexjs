@@ -1,5 +1,5 @@
-import { BindingBuilder } from "./containerBuilder.js";
-import { Identifier, Provider } from "./type.js";
+import { BindingBuilder } from "./containerBuilder";
+import { Identifier, Provider } from "./type";
 
 
 export class ContainerCore{

@@ -1,8 +1,8 @@
 import express from 'express'
-import { Bootstrap } from './infrastructure/bootstrap/init.js'
-import { Container } from './core/DI/container.js'
-import { TYPE } from './domain/DI/type.js'
-import { PlaceholderRouter } from './interface/http/express/router/placeholderExpressRouter.js'
+import { Bootstrap } from './infrastructure/bootstrap/init'
+import { Container } from './core/DI/container'
+import { TYPE } from './domain/DI/type'
+import { PlaceholderRouter } from './interface/http/express/router/placeholderExpressRouter'
 
 new Bootstrap()
 
@@ -10,18 +10,10 @@ new Bootstrap()
 const container = Container.get()
 const app = express()
 const port = 3000
+const placeholderRouter = container.get<PlaceholderRouter>(TYPE.PlaceholderRouter)
 app.use(express.json());
 
-const placeholderRouter = container.get<PlaceholderRouter>(TYPE.PlaceholderRouter)
-
-
-
-
-
-
 app.use('/', placeholderRouter.exec())
-
-
 
 
 app.listen(port, () => {

@@ -1,5 +1,5 @@
-import { HttpResponse } from "../../domain/http/http.js";
-import { Left, Right } from "../../domain/signal/railway.js";
+import { HttpResponse } from "../../domain/http/http";
+import { Left, Right } from "../../domain/signal/railway";
 
 export class HttpResponseFormatter {
     sendError(error:unknown, res: HttpResponse){

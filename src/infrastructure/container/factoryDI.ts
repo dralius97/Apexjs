@@ -1,11 +1,11 @@
-import { Container } from "../../core/DI/container.js";
-import { Middleware } from "../../core/middleware/middleware.js";
-import { HttpResponseFormatter } from "../HttpResponseFormatter/index.js";
-import { TYPE } from "../../domain/DI/type.js";
-import { PlaceholderUsecase } from "../../application/usecase/placeholderUsecase.js";
-import { PlaceholderController } from "../../interface/controller/placeholderController.js";
-import { ExpressAdapter } from "../../interface/http/express/adapter/index.js";
-import { PlaceholderRouter } from "../../interface/http/express/router/placeholderExpressRouter.js";
+import { Container } from "../../core/DI/container";
+import { Middleware } from "../../core/middleware/middleware";
+import { HttpResponseFormatter } from "../HttpResponseFormatter/index";
+import { TYPE } from "../../domain/DI/type";
+import { PlaceholderUsecase } from "../../application/usecase/placeholderUsecase";
+import { PlaceholderController } from "../../interface/controller/placeholderController";
+import { ExpressAdapter } from "../../interface/http/express/adapter/index";
+import { PlaceholderRouter } from "../../interface/http/express/router/placeholderExpressRouter";
 
 export const binding = () => {
     const container = Container.get()
