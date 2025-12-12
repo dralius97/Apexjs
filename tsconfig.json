@@ -35,8 +35,8 @@
     "noImplicitAny": true,
     "strictPropertyInitialization": true, 
     "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true,
-
+    "noEmit": true,
+    // "rewriteRelativeImportExtensions": true,
     // Recommended Options
     "strict": true,
     "alwaysStrict": true, 
@@ -45,5 +45,6 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": ["src/**/*"]
 }

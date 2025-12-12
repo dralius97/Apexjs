@@ -3,6 +3,7 @@ import { Inject } from "../../../../core/DI/decorator";
 import { TYPE } from "../../../../domain/DI/type";
 import { ExpressAdapter } from "../adapter";
 import { PlaceholderController } from "../../../controller/placeholderController";
+import { TYPEMDW } from "../../../../domain/middlware/type";
 
 export class PlaceholderRouter {
     @Inject(TYPE.ExpressAdapter) private adapter!: ExpressAdapter 
@@ -13,7 +14,7 @@ export class PlaceholderRouter {
         this.init()
     }
     private init = () => {
-        this.router.post('/palindrome', this.adapter.call(this.placeholderController.checkPalindrome))
+        this.router.post('/palindrome', this.adapter.call(TYPEMDW.Base,this.placeholderController.checkPalindrome))
     }
     exec = () => {
         return this.router

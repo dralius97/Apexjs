@@ -1,7 +1,0 @@
-export type Class<T = unknown> = abstract new (...args: unknown[]) => T;
-export type Provider<T> = {
-    instance: Class<T>;
-    singleton?: boolean;
-};
-export type Identifier = string | symbol;
-//# sourceMappingURL=type.d.ts.map

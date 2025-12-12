@@ -3,8 +3,9 @@ import { ContainerCore } from "../../core/DI/containerCore.ts";
 import { Middleware } from "../../core/middleware/middleware.ts";
 import { TYPE } from "../../domain/DI/type.ts";
 import { TYPEMDW } from "../../domain/middlware/type.ts";
-import { Right } from "../../domain/signal/railway.ts";
 import { binding } from "../container/factoryDI.ts";
+import { firstMdw } from "../middleware/firstMdw.ts";
+import { secondMdw } from "../middleware/secondMdw.ts";
 
 export class Bootstrap {
     private container: ContainerCore
@@ -18,7 +19,8 @@ export class Bootstrap {
     }
     private initiateMiddleware(){
         const mdw = this.container.get<Middleware>(TYPE.Middleware)
-        mdw.add(TYPEMDW.Base, [async ()=> new Right('mdw Pass')])
+        mdw.add(TYPEMDW.Base, [firstMdw,secondMdw])
+        
     }
     private init(){
         this.initiateContainer()

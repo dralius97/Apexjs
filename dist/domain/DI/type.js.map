@@ -1,1 +1,0 @@
-{"version":3,"file":"type.js","sourceRoot":"","sources":["../../../src/domain/DI/type.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,IAAI,GAAG;IAChB,UAAU,EAAE,MAAM,CAAC,GAAG,CAAC,YAAY,CAAC;IACpC,qBAAqB,EAAE,MAAM,CAAC,GAAG,CAAC,uBAAuB,CAAC;CAC7D,CAAA"}
