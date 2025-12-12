@@ -27,8 +27,8 @@ export class HttpResultCreated<T> extends Right<T> {
     }
 }
 
-export class ResponseFromMethod<T> extends Right<T> {
-    constructor(data: T){
-        super(data)
+export class Ok extends Right<void> {
+    constructor(message?: string){
+        super(undefined as void, message)
     }
 }

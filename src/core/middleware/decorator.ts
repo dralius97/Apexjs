@@ -1,7 +1,7 @@
 import { Either, Left } from "../../domain/signal/railway.ts"
 
 
-export const ValidateMethod = <A extends unknown[], R> (fn: (...args:A)=> Promise<Either<boolean>>) => {
+export const ValidateMethod = <A extends unknown[], R> (fn: (...args:A)=> Promise<Either<void>>) => {
     return (
         value: (...args: A) => Promise<Either<R>>, 
         _context: ClassMethodDecoratorContext
@@ -13,7 +13,7 @@ export const ValidateMethod = <A extends unknown[], R> (fn: (...args:A)=> Promis
 };
 
 
-export const ValidateField = <A extends unknown[], R> (fn: (...args:A)=> Promise<Either<boolean>>) => {
+export const ValidateField = <A extends unknown[], R> (fn: (...args:A)=> Promise<Either<void>>) => {
     return (
         _value: undefined, 
         _context: ClassFieldDecoratorContext
