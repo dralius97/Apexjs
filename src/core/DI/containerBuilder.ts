@@ -1,7 +1,7 @@
 import { Class, Identifier, Provider } from "./type.ts"
 
 export class BindingBuilder {
-  constructor(private container: Map<Identifier, Provider<unknown>>, private key){}
+  constructor(private container: Map<Identifier, Provider<unknown>>, private key: Identifier){}
   
   to<T>(ctor: Class<T>){
     this.container.set(this.key, { instance: ctor, singleton: false })

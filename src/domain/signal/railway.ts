@@ -5,8 +5,6 @@ export class Left extends Error{
         super(message)
         this.code = code
     }
-    isRight = false
-    isLeft = true
 } 
 
 export class Right<T> {
@@ -14,8 +12,6 @@ export class Right<T> {
     ){
         this.data = data
     }
-    isRight = true
-    isLeft = false
 }
 
 
@@ -31,8 +27,8 @@ export class HttpResultCreated<T> extends Right<T> {
     }
 }
 
-export class ResponseFromMethod<T> extends Right<T> {
-    constructor(data: T){
-        super(data)
+export class Ok extends Right<void> {
+    constructor(message?: string){
+        super(undefined as void, message)
     }
 }
