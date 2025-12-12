@@ -1,4 +1,4 @@
-import { Either, Left } from "../../domain/signal/railway.ts"
+import { Either, Left } from "../../domain/signal/railway.js"
 
 
 export const ValidateMethod = <A extends unknown[], R> (fn: (...args:A)=> Promise<Either<void>>) => {

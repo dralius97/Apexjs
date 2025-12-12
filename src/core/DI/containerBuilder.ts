@@ -1,4 +1,4 @@
-import { Class, Identifier, Provider } from "./type.ts"
+import { Class, Identifier, Provider } from "./type.js"
 
 export class BindingBuilder {
   constructor(private container: Map<Identifier, Provider<unknown>>, private key: Identifier){}

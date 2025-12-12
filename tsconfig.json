@@ -34,7 +34,6 @@
     "noPropertyAccessFromIndexSignature": false,
     "noImplicitAny": true,
     "strictPropertyInitialization": true, 
-    "allowImportingTsExtensions": true,
     "noEmit": true,
     // "rewriteRelativeImportExtensions": true,
     // Recommended Options

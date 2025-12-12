@@ -1,8 +1,8 @@
 import express from 'express'
-import { Bootstrap } from './infrastructure/bootstrap/init.ts'
-import { Container } from './core/DI/container.ts'
-import { TYPE } from './domain/DI/type.ts'
-import { PlaceholderRouter } from './interface/http/express/router/placeholderExpressRouter.ts'
+import { Bootstrap } from './infrastructure/bootstrap/init.js'
+import { Container } from './core/DI/container.js'
+import { TYPE } from './domain/DI/type.js'
+import { PlaceholderRouter } from './interface/http/express/router/placeholderExpressRouter.js'
 
 new Bootstrap()
 

@@ -1,11 +1,11 @@
-import { Container } from "../../core/DI/container.ts";
-import { ContainerCore } from "../../core/DI/containerCore.ts";
-import { Middleware } from "../../core/middleware/middleware.ts";
-import { TYPE } from "../../domain/DI/type.ts";
-import { TYPEMDW } from "../../domain/middlware/type.ts";
-import { binding } from "../container/factoryDI.ts";
-import { firstMdw } from "../middleware/firstMdw.ts";
-import { secondMdw } from "../middleware/secondMdw.ts";
+import { Container } from "../../core/DI/container.js";
+import { ContainerCore } from "../../core/DI/containerCore.js";
+import { Middleware } from "../../core/middleware/middleware.js";
+import { TYPE } from "../../domain/DI/type.js";
+import { TYPEMDW } from "../../domain/middlware/type.js";
+import { binding } from "../container/factoryDI.js";
+import { firstMdw } from "../middleware/firstMdw.js";
+import { secondMdw } from "../middleware/secondMdw.js";
 
 export class Bootstrap {
     private container: ContainerCore
