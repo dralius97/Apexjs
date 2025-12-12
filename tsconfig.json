@@ -32,7 +32,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "strictPropertyInitialization": true, 
     "allowImportingTsExtensions": true,
     "emitDeclarationOnly": true,

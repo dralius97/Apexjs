@@ -1,9 +1,9 @@
 import { Either, Right } from "../../domain/signal/railway"
 
 export class PlaceholderUsecase {
-    isPalindrome = async (str: string): Promise<Either<boolean>> => {
+    isPalindrome = async (str: string): Promise<Either<string>> => {
         const reverse = str.split('').reverse().join('')
         const isPalindrome = reverse === str
-        return new Right(isPalindrome)
+        return new Right( isPalindrome? `${str} merupakan palindrome`: `${str} bukan palindrome` )
     }
 } 
